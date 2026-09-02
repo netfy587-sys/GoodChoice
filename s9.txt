@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty, Before Brands — Traditional Rituals From Around the World</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --cream:    #FAF3E4;
+    --cream-2:  #F0E3CC;
+    --ink:      #2E2318;
+    --ink-soft: #6B5D4D;
+    --terra:    #B15A3A;
+    --terra-dk: #7C3D26;
+    --ochre:    #C08A2E;
+    --line:     rgba(46,35,24,0.16);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:'Karla', sans-serif; font-size:17px; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{ font-family:'Cormorant Garamond', serif; color:var(--ink); margin:0; font-weight:700; }
+  p{ margin:0 0 1em; max-width:60ch; color:var(--ink-soft); }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 32px; }
+
+  /* top bar */
+  .topbar{ display:flex; align-items:center; justify-content:space-between; max-width:1120px; margin:0 auto; padding:26px 32px; }
+  .topbar .mark{ font-family:'Cormorant Garamond', serif; font-weight:700; font-size:1.25rem; }
+  .topbar .mark em{ font-style:italic; color:var(--terra); }
+  .topbar .note{ font-size:0.82rem; color:var(--ink-soft); border:1px solid var(--line); padding:6px 14px; border-radius:999px; }
+
+  /* hero */
+  .hero{ padding:34px 0 76px; }
+  .hero-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:54px; align-items:center; }
+  .hero h1{ font-size:clamp(2.4rem,4.8vw,3.9rem); line-height:1.08; }
+  .hero h1 em{ font-style:italic; color:var(--terra); }
+  .hero p.lede{ font-size:1.1rem; margin-top:22px; }
+  .hero-figure img{ width:100%; height:410px; object-fit:cover; border-radius:4px; }
+  .hero-figure figcaption{ font-size:0.8rem; color:var(--ink-soft); margin-top:10px; }
+
+  /* section scaffolding */
+  section.block{ padding:80px 0; border-top:1px solid var(--line); }
+  section.block.soft{ background:var(--cream-2); }
+  .block-head{ max-width:680px; margin:0 auto 48px; text-align:center; }
+  .block-head .kicker{ font-size:0.82rem; color:var(--terra); margin-bottom:10px; letter-spacing:0.02em; }
+  .block-head h2{ font-size:clamp(1.7rem,3vw,2.35rem); margin-bottom:14px; }
+  .block-head p{ margin:0 auto; }
+
+  /* overview grid of 5 traditions */
+  .overview{ display:grid; grid-template-columns:repeat(5,1fr); gap:16px; }
+  .ov-card{ background:#fff; border:1px solid var(--line); border-radius:8px; padding:20px 16px; text-align:center; }
+  .ov-card .region{ font-family:'Cormorant Garamond', serif; font-style:italic; color:var(--ochre); font-size:0.95rem; margin-bottom:8px; }
+  .ov-card h3{ font-size:1.05rem; margin-bottom:8px; }
+  .ov-card p{ font-size:0.86rem; margin:0; }
+  @media (max-width:900px){ .overview{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .overview{ grid-template-columns:1fr; } }
+
+  /* feature row (deep dives) */
+  .feature{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:52px; align-items:center; }
+  .feature.reverse{ grid-template-columns:1.1fr 0.9fr; }
+  .feature.reverse .feature-media{ order:2; }
+  .feature-media img{ width:100%; height:320px; object-fit:cover; border-radius:6px; }
+  .feature-media figcaption{ font-size:0.8rem; color:var(--ink-soft); margin-top:10px; }
+  .feature-text .region-tag{ font-family:'Cormorant Garamond', serif; font-style:italic; color:var(--terra); font-size:1.05rem; margin-bottom:10px; display:block; }
+  .feature-text h3{ font-size:1.6rem; margin-bottom:14px; }
+  .feature-text ul{ padding-left:20px; margin:16px 0 0; color:var(--ink-soft); }
+  .feature-text li{ margin-bottom:9px; }
+
+  @media (max-width:820px){
+    .feature, .feature.reverse{ grid-template-columns:1fr; }
+    .feature.reverse .feature-media{ order:0; }
+    .hero-grid{ grid-template-columns:1fr; }
+  }
+
+  /* callout */
+  .callout{
+    max-width:760px; margin:0 auto; text-align:center;
+    background:var(--terra-dk); color:#FBF0E6; border-radius:16px; padding:44px 40px;
+  }
+  .callout h2{ color:#FBF0E6; font-size:1.7rem; margin-bottom:16px; }
+  .callout p{ color:#EAD2C4; margin:0 auto; }
+
+  /* closing */
+  .closing{ padding:90px 0 60px; text-align:center; }
+  .closing h2{ font-size:clamp(1.7rem,3.2vw,2.4rem); max-width:700px; margin:0 auto 18px; }
+  .closing p{ margin:0 auto; }
+
+  footer{ border-top:1px solid var(--line); padding:30px 0 40px; }
+  footer .wrap{ display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:space-between; font-size:0.8rem; color:var(--ink-soft); }
+
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="mark">beauty, <em>before</em> brands</div>
+    <div class="note">Traditional rituals from around the world</div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <h1>Long before the beauty aisle, there were <em>kitchens, gardens, and grandmothers</em>.</h1>
+          <p class="lede">Most of what a modern beauty counter sells has a much older ancestor — a paste, a powder, or an oil that a community relied on for generations. This is a look at five such traditions, still practiced today, without a single brand attached to any of them.</p>
+        </div>
+        <figure class="hero-figure">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Turmeric_Powder_on_a_Spoon_-_Black_Background.jpg?width=900" alt="Turmeric powder on a spoon" loading="lazy">
+          <figcaption>Turmeric — one of the oldest, most widely used natural beauty ingredients in the world.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </header>
+
+  <!-- OVERVIEW -->
+  <section class="block soft">
+    <div class="wrap">
+      <div class="block-head">
+        <div class="kicker">Five traditions, five continents</div>
+        <h2>A quick tour before the details</h2>
+      </div>
+      <div class="overview">
+        <div class="ov-card">
+          <div class="region">South Asia</div>
+          <h3>Turmeric</h3>
+          <p>A golden paste used for centuries as a skin brightener and pre-wedding ritual.</p>
+        </div>
+        <div class="ov-card">
+          <div class="region">South Asia · MENA · Africa</div>
+          <h3>Henna</h3>
+          <p>A plant dye used for decoration, cooling, and celebration for over 6,000 years.</p>
+        </div>
+        <div class="ov-card">
+          <div class="region">West Africa</div>
+          <h3>Shea butter</h3>
+          <p>A rich, unrefined fat used to protect and heal skin across generations.</p>
+        </div>
+        <div class="ov-card">
+          <div class="region">East Asia</div>
+          <h3>Rice water</h3>
+          <p>A fermented rinse credited with strengthening hair and softening skin.</p>
+        </div>
+        <div class="ov-card">
+          <div class="region">Ancient Egypt · MENA · South Asia</div>
+          <h3>Kohl</h3>
+          <p>One of humanity's oldest cosmetics, worn for both beauty and sun protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TURMERIC -->
+  <section class="block">
+    <div class="wrap">
+      <div class="feature">
+        <figure class="feature-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Turmeric_Powder_on_a_Spoon_-_Black_Background.jpg?width=900" alt="A spoonful of golden turmeric powder" loading="lazy">
+          <figcaption>Turmeric's active compound, curcumin, is still studied for its anti-inflammatory properties.</figcaption>
+        </figure>
+        <div class="feature-text">
+          <span class="region-tag">South Asia</span>
+          <h3>Turmeric: the golden paste before every celebration</h3>
+          <p>In South Asian households, an "ubtan" — turmeric mixed with gram flour, milk, or yogurt — has been applied before weddings and festivals for generations, valued for leaving skin visibly brighter and smoother.</p>
+          <ul>
+            <li>Turmeric has documented anti-inflammatory and antibacterial properties, which is part of why it was traditionally used on both skin and minor wounds.</li>
+            <li>The pre-wedding "haldi" ceremony turns the ritual into a shared, communal event rather than a private routine.</li>
+            <li>Modern skincare's interest in turmeric-based formulas traces directly back to this centuries-old household practice.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HENNA -->
+  <section class="block soft">
+    <div class="wrap">
+      <div class="feature reverse">
+        <figure class="feature-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mehndi_designs_hand.jpg?width=900" alt="Intricate henna design applied to a hand" loading="lazy">
+          <figcaption>Designs can take hours to apply and are traditionally left to darken overnight.</figcaption>
+        </figure>
+        <div class="feature-text">
+          <span class="region-tag">South Asia · Middle East · North Africa</span>
+          <h3>Henna: decoration with a cooling purpose</h3>
+          <p>Ground from the leaves of the henna plant, this paste has marked weddings, festivals, and rites of passage across multiple, largely unconnected cultures for thousands of years.</p>
+          <ul>
+            <li>Beyond decoration, henna paste was traditionally valued for its cooling effect on skin in hot climates.</li>
+            <li>Bridal henna ceremonies exist independently in South Asian, Middle Eastern, and North African traditions, each with distinct patterns and meanings.</li>
+            <li>The stain fades naturally over one to three weeks, requiring no removal product of any kind.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHEA BUTTER -->
+  <section class="block">
+    <div class="wrap">
+      <div class="feature">
+        <figure class="feature-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Naturally_Processed_Shea_Butter_2.jpg?width=900" alt="Naturally processed, raw shea butter" loading="lazy">
+          <figcaption>Traditionally processed by hand, from roasting and grinding the nut to whipping the final butter.</figcaption>
+        </figure>
+        <div class="feature-text">
+          <span class="region-tag">West Africa</span>
+          <h3>Shea butter: a whole household craft</h3>
+          <p>Extracted from the nut of the African shea tree, this ivory-colored fat has been produced by West African communities — largely by women, passing the process down through families — for centuries.</p>
+          <ul>
+            <li>Its high fatty-acid content makes it especially effective at softening dry, cracked skin.</li>
+            <li>Traditional processing involves roasting, grinding, and hand-whipping the nut paste over several days.</li>
+            <li>The cooperative, community-based production of shea butter remains an important source of income for many West African women today.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RICE WATER -->
+  <section class="block soft">
+    <div class="wrap">
+      <div class="feature reverse">
+        <figure class="feature-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rice_Water.jpg?width=900" alt="A bowl of rice water, the starchy liquid left after soaking or rinsing rice" loading="lazy">
+          <figcaption>The water is simply what's left after rice is soaked or rinsed — nothing added.</figcaption>
+        </figure>
+        <div class="feature-text">
+          <span class="region-tag">East Asia</span>
+          <h3>Rice water: the starchy rinse behind famously long hair</h3>
+          <p>Communities across China and Japan have used the water left over from washing or fermenting rice as a hair rinse and skin toner for centuries — most famously among the Yao women of Huangluo village, known for hair that often reaches the floor.</p>
+          <ul>
+            <li>Rice water contains inositol, a carbohydrate that can coat hair strands and reduce friction damage.</li>
+            <li>As a skin toner, it's traditionally used for a mild brightening and smoothing effect.</li>
+            <li>The practice requires nothing beyond rice and water, which is part of why it has persisted for so long.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KOHL -->
+  <section class="block">
+    <div class="wrap">
+      <div class="feature">
+        <figure class="feature-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ancient_Egyptian_kohl_pot_and_stick,_1800-200_BCE_Wellcome_L0065483.jpg?width=900" alt="An ancient Egyptian kohl pot and applicator stick" loading="lazy">
+          <figcaption>A kohl pot and applicator dating from roughly 1800–200 BCE — makeup as an ancient, everyday object.</figcaption>
+        </figure>
+        <div class="feature-text">
+          <span class="region-tag">Ancient Egypt · Middle East · South Asia</span>
+          <h3>Kohl: humanity's oldest cosmetic with a practical job</h3>
+          <p>Worn by both men and women in ancient Egypt, kohl was ground from minerals into a fine powder and lined along the eyes — a practice believed to have started long before it became decorative.</p>
+          <ul>
+            <li>Beyond appearance, ancient wearers associated kohl with reducing glare from the sun and warding off eye infections.</li>
+            <li>The same basic technique — a powder applied along the lash line with a stick — evolved independently into today's kajal, surma, and eyeliner traditions.</li>
+            <li>Kohl containers recovered from Egyptian tombs are among the oldest cosmetic artifacts ever found.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALLOUT -->
+  <section class="block soft">
+    <div class="wrap">
+      <div class="callout">
+        <h2>These traditions still hold their own</h2>
+        <p>Many modern skincare and makeup ingredients — brightening actives, plant oils, natural dyes, mineral pigments — are, in some form, a return to ingredients these traditions never stopped using. The names on the label changed far more than the ingredients themselves.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap">
+      <h2>Not every good idea in beauty is new. Some of the oldest ones just got rediscovered.</h2>
+      <p style="margin-left:auto;margin-right:auto;">Each of these practices grew out of what a specific community had on hand — a plant, a grain, a mineral — refined over generations without a single advertisement. That's worth remembering the next time a "new" ingredient shows up with a modern name.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>A cultural and historical overview — not affiliated with, and not promoting, any brand or product.</span>
+      <span>Photographs via Wikimedia Commons, used under their respective Creative Commons and public-domain licenses.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
